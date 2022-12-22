@@ -1,0 +1,9 @@
+using UnityEditor;
+using UnityEngine;
+
+    #ROOTNAMESPACEBEGIN#
+public class #SCRIPTNAME# : AssetPostprocess
+{
+    
+}
+#ROOTNAMESPACEEND#

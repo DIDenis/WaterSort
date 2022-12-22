@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: Level template
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 1b9ed20420986b248b98b25fc36e8fe8, type: 3}
+  templateName: 
+  description: 
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 2800000, guid: 2bda8c7c979f97c4dbb069bf560b9aaa, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: fc14734a035879f458fe4a027e71b40a, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: 3f328b6444ff7fc469fcb183756baf23, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 939810462516142021, guid: e2a16ab387007fa48a62a07951736038, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 8981207765669054724, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
+    instantiationMode: 1
+  - dependency: {fileID: 2800000, guid: aeeb6d6dccbff1046a209b545d7acbb3, type: 3}
+    instantiationMode: 1
+  templatePipeline: {fileID: 0}
+  addToDefaults: 1
