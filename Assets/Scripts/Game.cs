@@ -74,7 +74,7 @@ public class Game : MonoBehaviour, IPersistentObject
     ///</summary>
     public IEnumerator LoadNextLevel()
     {
-        if (currentLevel == SceneManager.sceneCountInBuildSettings)
+        if (currentLevel == SceneManager.sceneCountInBuildSettings - 1)
             currentLevel = 1;
         else if (completedLevel)
             currentLevel++;
