@@ -1,7 +1,8 @@
-using System.IO;
-
-public interface IPersistentObject
+namespace WaterSort
 {
-    void Save(GameDataWriter writer);
-    void Load(GameDataReader reader);
+    public interface IPersistentObject
+    {
+        void Save(GameDataWriter writer);
+        void Load(GameDataReader reader);
+    }
 }

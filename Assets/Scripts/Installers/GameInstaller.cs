@@ -1,11 +1,13 @@
-using UnityEngine;
 using Zenject;
 
-public class GameInstaller : MonoInstaller
+namespace WaterSort
 {
-    public override void InstallBindings()
+    public class GameInstaller : MonoInstaller
     {
-        Container.Bind<Game>().FromComponentInHierarchy().AsSingle().NonLazy();
-        Container.Bind<GameView>().FromComponentInHierarchy().AsSingle().NonLazy();
+        public override void InstallBindings()
+        {
+            Container.Bind<Game>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<GameView>().FromComponentInHierarchy().AsSingle().NonLazy();
+        }
     }
 }

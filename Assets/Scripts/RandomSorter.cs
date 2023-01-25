@@ -1,36 +1,48 @@
 using UnityEngine;
 using System.Collections.Generic;
-using Zenject;
-using System;
 
-public class RandomSorter
+namespace WaterSort
 {
-    List<Color> colors;
-    List<Flask> flasks;
-
-    public RandomSorter(List<Flask> flasks, List<Color> colors)
+    public class RandomSorter
     {
-        this.flasks = new List<Flask>(flasks);
-        this.colors = new List<Color>(colors);
-        Sort();
-    }
+        List<Color> colors = new List<Color>();
 
-    void Sort()
-    {   
-        flasks.Sort();
-        flasks.RemoveLast(2);
+        public RandomSorter(Settings settings)
+        {
+            int index = 0;
+            for (int i = 0; i < settings.colorBlocksCount; i++)
+            {
+                if (index == settings.colors.Length)
+                    index = 0;
+                colors.Add(settings.colors[index++]);
+            }
+            colors.RandomSort();
+        }
 
-        if (flasks.Count != colors.Count)
-            throw new UnityException(
-                $"Количество колб не равно количеству цветов. Количество колб: {flasks.Count} Количество цветов: {colors.Count}"
-            );
-        List<Color> sortColors = new List<Color>();
-        for (int i = 0; i < 4; i++)
-            for (int j = 0; j < colors.Count; j++)
-                sortColors.Add(colors[j]);
-        sortColors.RandomSort();
+        public Color[] GetColors(int count)
+        {
+            if (this.colors.Count == 0)
+                throw new UnityException("Попытка использовать пустой список цветов");
 
-        for (int i = 0, j = 0; i < sortColors.Count; )
-            flasks[j++].SetColors(sortColors[i++], sortColors[i++], sortColors[i++], sortColors[i++]);
+            List<Color> colors = new List<Color>();
+            for (int i = 0; i < count; i++)
+            {
+                colors.Add(this.colors[0]);
+                this.colors.RemoveAt(0);
+            }
+            return colors.ToArray();
+        }
+
+        [System.Serializable]
+        public struct Settings
+        {
+            ///<summary>Количество цветных блоков всех заполняемых колб на уровне</summary>
+            [Tooltip("Количество цветных блоков всех заполняемых колб на уровне")]
+            public int colorBlocksCount;
+
+            ///<summary>Все возможные на уровне цвета</summary>
+            [Tooltip("Все возможные на уровне цвета")]
+            public Color[] colors;
+        }
     }
 }

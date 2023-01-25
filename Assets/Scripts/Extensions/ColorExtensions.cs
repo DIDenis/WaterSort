@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public static class ColorExtensions
+namespace WaterSort
 {
-    ///<summary>
-    ///Сравнивает 2 цвета по RGB-каналам, игнорируя альфа-канал
-    ///</summary>
-    public static bool EqualsColor(this Color thisColor, Color otherColor)
+    public static class ColorExtensions
     {
-        thisColor.a = 0;
-        otherColor.a = 0;
-        return thisColor.Equals(otherColor);
+        ///<summary>
+        ///Сравнивает 2 цвета по RGB-каналам, игнорируя альфа-канал
+        ///</summary>
+        public static bool EqualsColor(this Color thisColor, Color otherColor)
+        {
+            thisColor.a = 0;
+            otherColor.a = 0;
+            return thisColor.Equals(otherColor);
+        }
     }
 }

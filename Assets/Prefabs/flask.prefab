@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1176451698279660829}
+  - component: {fileID: 342145533082814389}
   - component: {fileID: 9104815440526951546}
   m_Layer: 0
   m_Name: water
@@ -32,6 +33,18 @@ Transform:
   m_Father: {fileID: 8981207765950065709}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &342145533082814389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 246526174846184739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6d2f80fcd72dc49b577d0c50c0411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &9104815440526951546
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -93,6 +106,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6639689935867734659}
+  - component: {fileID: 3663480736277361802}
   - component: {fileID: 2082217804552447303}
   m_Layer: 0
   m_Name: water
@@ -116,6 +130,18 @@ Transform:
   m_Father: {fileID: 8981207765950065709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3663480736277361802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 526550757633994595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6d2f80fcd72dc49b577d0c50c0411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &2082217804552447303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -177,6 +203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3523166286245721440}
+  - component: {fileID: 115159036319689609}
   - component: {fileID: 6993451568550149242}
   m_Layer: 0
   m_Name: water
@@ -200,6 +227,18 @@ Transform:
   m_Father: {fileID: 8981207765950065709}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &115159036319689609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5945437636016282271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6d2f80fcd72dc49b577d0c50c0411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &6993451568550149242
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -261,6 +300,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8331997077242627791}
+  - component: {fileID: 8662300330135113325}
   - component: {fileID: 8453922332059718283}
   m_Layer: 0
   m_Name: water
@@ -284,6 +324,18 @@ Transform:
   m_Father: {fileID: 8981207765950065709}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8662300330135113325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6064493761868715734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb6d2f80fcd72dc49b577d0c50c0411e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &8453922332059718283
 SpriteRenderer:
   m_ObjectHideFlags: 0

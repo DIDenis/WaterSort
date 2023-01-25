@@ -135,6 +135,10 @@ PrefabInstance:
       value: flask
       objectReference: {fileID: 0}
     - target: {fileID: 8981207765669054731, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
+      propertyPath: fill
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981207765669054731, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
       propertyPath: left
       value: 1
       objectReference: {fileID: 0}
@@ -276,11 +280,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spillingWaterPrefab: {fileID: 939810462516142011, guid: e2a16ab387007fa48a62a07951736038, type: 3}
-  colors:
-  - {r: 1, g: 0, b: 0, a: 1}
-  - {r: 0, g: 1, b: 0, a: 1}
-  - {r: 1, g: 1, b: 0, a: 1}
-  - {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  sorterSettings:
+    colorBlocksCount: 16
+    colors:
+    - {r: 1, g: 0, b: 0, a: 1}
+    - {r: 0, g: 1, b: 0, a: 1}
+    - {r: 1, g: 1, b: 0, a: 1}
+    - {r: 0.5, g: 0.5, b: 0.5, a: 1}
 --- !u!114 &888394891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -562,6 +568,10 @@ PrefabInstance:
     - target: {fileID: 8981207765669054724, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
       propertyPath: m_Name
       value: flask
+      objectReference: {fileID: 0}
+    - target: {fileID: 8981207765669054731, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
+      propertyPath: fill
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8981207765669054731, guid: e415f25297dbcee4d978eb46a4c353a3, type: 3}
       propertyPath: isEmpty

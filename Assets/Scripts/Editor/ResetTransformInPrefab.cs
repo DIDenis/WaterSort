@@ -1,10 +1,13 @@
 using UnityEditor;
 using UnityEngine;
 
-public class ResetTransformInPrefab : AssetPostprocessor
+namespace WaterSort
 {
-    void OnPostprocessPrefab (GameObject o)
+    public class ResetTransformInPrefab : AssetPostprocessor
     {
-        o.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+        void OnPostprocessPrefab (GameObject o)
+        {
+            o.transform.SetPositionAndRotation(Vector3.zero, Quaternion.identity);
+        }
     }
 }

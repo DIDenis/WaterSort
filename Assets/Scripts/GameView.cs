@@ -1,38 +1,33 @@
 using UnityEngine;
 using UnityEngine.UI;
-using Zenject;
-using System;
 
-public class GameView : MonoBehaviour
+namespace WaterSort
 {
-    [SerializeField] Canvas window;
-    [SerializeField] Text currentLevel;
-    [SerializeField] Button restart;
-    [Inject] Game game;
+    public class GameView : MonoBehaviour
+    {
+        [SerializeField] Canvas window;
+        [SerializeField] Text currentLevel;
+        [SerializeField] Button restart;
 
-    void Awake()
-    {
-        window.enabled = false;
-        restart.enabled = false;
-    }
+        void Awake()
+        {
+            window.enabled = false;
+            restart.enabled = false;
+        }
 
-    public void SetLevelName(string levelName)
-    {
-        currentLevel.text = levelName;
-        restart.enabled = true;
-    }
-    public void EnablePopWindow()
-    {
-        window.enabled = true;
-        restart.enabled = false;
-    }
-    public void LoadNextLevel()
-    {
-        StartCoroutine(game.LoadNextLevel());
-        window.enabled = false;
-    }
-    public void Restart()
-    {
-        StartCoroutine(game.ReloadLevel());
+        public void SetLevelName(string levelName)
+        {
+            currentLevel.text = levelName;
+            restart.enabled = true;
+        }
+        public void OpenPopWindow()
+        {
+            window.enabled = true;
+            restart.enabled = false;
+        }
+        public void ClosePopWindow()
+        {
+            window.enabled = false;
+        }
     }
 }

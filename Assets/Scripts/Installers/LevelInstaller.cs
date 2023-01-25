@@ -1,19 +1,21 @@
 using UnityEngine;
 using Zenject;
-using System.Collections.Generic;
 
-public class LevelInstaller : MonoInstaller
+namespace WaterSort
 {
-    [SerializeField] SpriteRenderer spillingWaterPrefab;
-    [SerializeField] List<Color> colors;
-
-    public override void InstallBindings()
+    public class LevelInstaller : MonoInstaller
     {
-        Container.Bind<Solver>().FromComponentInHierarchy().AsSingle().NonLazy();
-        Container.Bind<SpriteRenderer>().FromInstance(spillingWaterPrefab);
-        
-        Container.Bind<RandomSorter>().AsSingle().NonLazy();
-        Container.Bind<Flask>().FromComponentsInHierarchy().AsTransient();
-        Container.Bind<List<Color>>().FromInstance(colors);
+        [SerializeField] SpriteRenderer spillingWaterPrefab;
+        [SerializeField] RandomSorter.Settings sorterSettings;
+
+        public override void InstallBindings()
+        {
+            Container.Bind<Solver>().FromComponentInHierarchy().AsSingle().NonLazy();
+            Container.Bind<SpriteRenderer>().FromInstance(spillingWaterPrefab);
+            
+            Container.Bind<RandomSorter.Settings>().FromInstance(sorterSettings);
+            Container.Bind<RandomSorter>().AsSingle().NonLazy();
+            Container.Bind<Flask>().FromComponentsInHierarchy().AsTransient();
+        }
     }
 }
